@@ -1,0 +1,28 @@
+Package: toy_survey_data
+Type: Package
+Title: Create Toy Survey Data
+Version: 1.0.0
+Date: 2026-01-14
+Authors@R: c(
+    person("Abigail", "Stamm", email = "abby.stamm@state.mn.us", 
+      role = c("cre", "aut"), comment = "author of R package"))
+Maintainer: Abigail Stamm, Minnesota Department of Health
+Description: The purpose of this package is to create fake or toy data based on 
+    settings provided in a table. Settings should be based on the survey 
+    questions. Question types allowed include continuous variables (such as 
+    height), date ranges (such as survey completion date), single-selection 
+    categorical variables (such as Likert scales), and multiple-selection
+    categorical variables (such as "Pick your three favorite ...").
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Depends: R (>= 4.5.0)
+Imports: 
+Suggests: 
+RoxygenNote: 7.2.3
+VignetteBuilder: knitr
+Roxygen: list(markdown = TRUE)
+URL: https://github.com/ajstamm/toy_survey_data
+BugReports: https://github.com/ajstamm/toy_survey_data/issues
+
+
