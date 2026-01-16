@@ -8,29 +8,26 @@ gender,select-one,Agender,1,,,,,,,,5
 gender,select-one,Female,60,,,,,,,,5
 gender,select-one,Male,40,,,,,,,,5
 gender,select-one,Non-binary,2,,,,,,,,5
-gender,select-one,Other,2,,,,,,,,5
+gender,select-one,Other - Write In (Required),2,,,,,,,,5
 gender,select-one,Prefer not to say,5,,,,,,,,5
 gender,select-one,Transgender,5,,,,,,,,5
 gender,select-one,Two-Spirit,1,,,,,,,,5
-race_eth,select-many,race_aian,2,American Indian or Alaska Native,1,,,,,3,5
-race_eth,select-many,race_asian,5,Asian or Asian American,1,,,,,3,5
-race_eth,select-many,race_black,7,Black or African or African American,3,,,,,3,5
-race_eth,select-many,race_hawaii,1,Native Hawaiian or Pacific Islander,1,,,,,3,5
-race_eth,select-many,race_hisp,6,Hispanic or Latino,3,,,,,3,5
-race_eth,select-many,race_other,1,Race not listed,0,,,,,3,5
-race_eth,select-many,race_refuse,5,Prefer not to say,90,,,,,3,5
-race_eth,select-many,race_white,76,White,0,,,,,3,5
-seek_care,select-many,care_chiro,5,Chiropractor,5,,,,,5,5
-seek_care,select-many,care_clinic,20,Outpatient clinic,20,,,,,5,5
-seek_care,select-many,care_doc,34,Doctor's office,34,,,,,5,5
-seek_care,select-many,care_emerg,15,Emergency room,15,,,,,5,5
-seek_care,select-many,care_media,52,Social media,52,,,,,5,5
-seek_care,select-many,care_none,5,None,5,,,,,5,5
-seek_care,select-many,care_other,10,Other,10,,,,,5,5
-seek_care,select-many,care_public,15,Public health,15,,,,,5,5
-seek_care,select-many,care_search,37,Internet search,37,,,,,5,5
-seek_care,select-many,care_tele,15,Telehealth,15,,,,,5,5
-seek_care,select-many,care_urgent,15,Urgent care clinic,15,,,,,5,5
+race,select-many,race_aian,2,American Indian or Alaska Native,1,,,,,3,5
+race,select-many,race_asian,5,Asian or Asian American,1,,,,,3,5
+race,select-many,race_black,7,Black or African or African American,3,,,,,3,5
+race,select-many,race_hawaii,1,Native Hawaiian or Pacific Islander,1,,,,,3,5
+ethnicity,select-one,Prefer not to say,5,,,,,,,,
+ethnicity,select-one,No,94,,,,,,,,
+ethnicity,select-one,Yes,6,,,,,,,,
+race,select-many,race_other,1,Other - Write In (Required),0,,,,,3,5
+race,select-many,race_refuse,5,Prefer not to say,90,,,,,3,5
+race,select-many,race_white,76,White,0,,,,,3,5
+care,select-many,care_clinic,20,Outpatient clinic,20,,,,,5,5
+care,select-many,care_doc,34,Doctor's office,34,,,,,5,5
+care,select-many,care_emerg,15,Emergency room,15,,,,,5,5
+care,select-many,care_other,5,Other - Write In (Required),0,,,,,5,5
+care,select-many,care_tele,15,Telehealth,15,,,,,5,5
+care,select-many,care_urgent,15,Urgent care clinic,15,,,,,5,5
 sex_orient,select-one,Asexual,1,,,,,,,,10
 sex_orient,select-one,Bisexual,6,,,,,,,,10
 sex_orient,select-one,Gay,2,,,,,,,,10
@@ -38,7 +35,7 @@ sex_orient,select-one,Lesbian,2,,,,,,,,10
 sex_orient,select-one,Pansexual,1,,,,,,,,10
 sex_orient,select-one,Prefer not to say,5,,,,,,,,10
 sex_orient,select-one,Queer,1,,,,,,,,10
-sex_orient,select-one,Sexual orientation not listed,2,,,,,,,,10
+sex_orient,select-one,Other - Write In (Required),2,,,,,,,,10
 sex_orient,select-one,Straight/Heterosexual,86,,,,,,,,10
 weight_cat,select-one,About the right weight,48,,,,,,,,5
 weight_cat,select-one,Obese,5,,,,,,,,5
@@ -53,3 +50,90 @@ weight_lb,normal,,,Weight in pounds,,100,900,180,35,,10
 height_ft,normal,,,Height in feet,,3,7,5.7,0.4,,7
 survey_date,date,,,Survey date,,10/1/2025,11/30/2025,,,,0
 birth_year,normal,,,Birth year,,1900,2010,1970,15,,3
+res_county,select-one,Hennepin,1254,,,,,,,,0.1
+res_county,select-one,Ramsey,547,,,,,,,,0.1
+res_county,select-one,Dakota,424,,,,,,,,0.1
+res_county,select-one,Anoka,353,,,,,,,,0.1
+res_county,select-one,Scott,147,,,,,,,,0.1
+res_county,select-one,Carver,103,,,,,,,,0.1
+res_county,select-one,Chisago,56,,,,,,,,0.1
+res_county,select-one,Washington,258,,,,,,,,0.1
+res_county,select-one,St. Louis,200,,,,,,,,0.1
+res_county,select-one,Stearns,159,,,,,,,,0.1
+res_county,select-one,Olmsted,156,,,,,,,,0.1
+res_county,select-one,Wright,136,,,,,,,,0.1
+res_county,select-one,Sherburne,96,,,,,,,,0.1
+res_county,select-one,Blue Earth,67,,,,,,,,0.1
+res_county,select-one,Rice,66,,,,,,,,0.1
+res_county,select-one,Crow Wing,65,,,,,,,,0.1
+res_county,select-one,Clay,64,,,,,,,,0.1
+res_county,select-one,Otter Tail,58,,,,,,,,0.1
+res_county,select-one,Winona,51,,,,,,,,0.1
+res_county,select-one,Beltrami,47,,,,,,,,0.1
+res_county,select-one,Goodhue,46,,,,,,,,0.1
+res_county,select-one,Itasca,45,,,,,,,,0.1
+res_county,select-one,Kandiyohi,43,,,,,,,,0.1
+res_county,select-one,Benton,40,,,,,,,,0.1
+res_county,select-one,Mower,40,,,,,,,,0.1
+res_county,select-one,Isanti,40,,,,,,,,0.1
+res_county,select-one,Douglas,38,,,,,,,,0.1
+res_county,select-one,Steele,37,,,,,,,,0.1
+res_county,select-one,McLeod,36,,,,,,,,0.1
+res_county,select-one,Carlton,36,,,,,,,,0.1
+res_county,select-one,Becker,34,,,,,,,,0.1
+res_county,select-one,Nicollet,34,,,,,,,,0.1
+res_county,select-one,Morrison,33,,,,,,,,0.1
+res_county,select-one,Polk,31,,,,,,,,0.1
+res_county,select-one,Freeborn,30,,,,,,,,0.1
+res_county,select-one,Cass,29,,,,,,,,0.1
+res_county,select-one,Pine,29,,,,,,,,0.1
+res_county,select-one,Le Sueur,28,,,,,,,,0.1
+res_county,select-one,Mille Lacs,26,,,,,,,,0.1
+res_county,select-one,Lyon,26,,,,,,,,0.1
+res_county,select-one,Brown,25,,,,,,,,0.1
+res_county,select-one,Todd,25,,,,,,,,0.1
+res_county,select-one,Meeker,23,,,,,,,,0.1
+res_county,select-one,Hubbard,22,,,,,,,,0.1
+res_county,select-one,Nobles,22,,,,,,,,0.1
+res_county,select-one,Wabasha,22,,,,,,,,0.1
+res_county,select-one,Fillmore,21,,,,,,,,0.1
+res_county,select-one,Dodge,21,,,,,,,,0.1
+res_county,select-one,Martin,20,,,,,,,,0.1
+res_county,select-one,Waseca,19,,,,,,,,0.1
+res_county,select-one,Houston,18,,,,,,,,0.1
+res_county,select-one,Kanabec,16,,,,,,,,0.1
+res_county,select-one,Aitkin,16,,,,,,,,0.1
+res_county,select-one,Roseau,15,,,,,,,,0.1
+res_county,select-one,Redwood,15,,,,,,,,0.1
+res_county,select-one,Sibley,15,,,,,,,,0.1
+res_county,select-one,Renville,15,,,,,,,,0.1
+res_county,select-one,Faribault,14,,,,,,,,0.1
+res_county,select-one,Wadena,14,,,,,,,,0.1
+res_county,select-one,Pennington,14,,,,,,,,0.1
+res_county,select-one,Chippewa,12,,,,,,,,0.1
+res_county,select-one,Koochiching,12,,,,,,,,0.1
+res_county,select-one,Pope,11,,,,,,,,0.1
+res_county,select-one,Cottonwood,11,,,,,,,,0.1
+res_county,select-one,Watonwan,11,,,,,,,,0.1
+res_county,select-one,Lake,11,,,,,,,,0.1
+res_county,select-one,Jackson,10,,,,,,,,0.1
+res_county,select-one,Stevens,10,,,,,,,,0.1
+res_county,select-one,Yellow Medicine,10,,,,,,,,0.1
+res_county,select-one,Swift,10,,,,,,,,0.1
+res_county,select-one,Rock,10,,,,,,,,0.1
+res_county,select-one,Pipestone,9,,,,,,,,0.1
+res_county,select-one,Clearwater,9,,,,,,,,0.1
+res_county,select-one,Marshall,9,,,,,,,,0.1
+res_county,select-one,Murray,8,,,,,,,,0.1
+res_county,select-one,Lac qui Parle,7,,,,,,,,0.1
+res_county,select-one,Norman,6,,,,,,,,0.1
+res_county,select-one,Wilkin,6,,,,,,,,0.1
+res_county,select-one,Grant,6,,,,,,,,0.1
+res_county,select-one,Cook,6,,,,,,,,0.1
+res_county,select-one,Lincoln,6,,,,,,,,0.1
+res_county,select-one,Mahnomen,5,,,,,,,,0.1
+res_county,select-one,Big Stone,5,,,,,,,,0.1
+res_county,select-one,Kittson,4,,,,,,,,0.1
+res_county,select-one,Red Lake,4,,,,,,,,0.1
+res_county,select-one,Lake of the Woods,4,,,,,,,,0.1
+res_county,select-one,Traverse,3,,,,,,,,0.1
