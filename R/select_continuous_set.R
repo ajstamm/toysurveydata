@@ -4,16 +4,12 @@
 #' @param count integer; number of responses (rows)
 #' 
 #' @examples
-#' d <- data.frame(
-#'   type = "normal",
-#'   variable = "my_numbers",
-#'   min_val = 0,	max_val = 100,
-#'   mean_val = 75,	sd_val = 10,
-#'   miss_pct = 10
-#' )
+#' d <- data.frame(type = "normal", variable = "my_numbers", miss_pct = 10,
+#'                 min_val = 0,	max_val = 100, mean_val = 75,	sd_val = 10)
 #' 
 #' select_continuous_set(d, count = 10)
 #' 
+#' @export
 
 select_continuous_set <- function(d, count) {
   dt <- unique(d$variable[which(d$type == "normal")])

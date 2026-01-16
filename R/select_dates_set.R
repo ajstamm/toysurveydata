@@ -4,13 +4,12 @@
 #' @param count integer; number of responses (rows)
 #' 
 #' @examples
-#' d <- data.frame(
-#'   variable = "my_dates", type = "date",
-#'   min_val = "6/1/2025",	max_val = "8/31/2025", miss_pct = 10
-#' )
+#' d <- data.frame(variable = "my_dates", type = "date", miss_pct = 10,
+#'                 min_val = "6/1/2025",	max_val = "8/31/2025")
 #' 
 #' select_dates_set(d, count = 10)
 #' 
+#' @export
 
 
 select_dates_set <- function(d, count) {

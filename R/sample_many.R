@@ -1,9 +1,22 @@
 #' Calculate multiple booleans
 #' 
+#' This function provides up to the maximum allowed number of responses. Some 
+#' responses will have less and if your "miss_pct" is greater than zero, some 
+#' responses will have no selections.
+#' 
 #' @param var      string; variable name
 #' @param d        dataset; contains labels and probabilities
 #' @param count    integer; number of responses (rows)
 #' 
+#' 
+#' @examples
+#' d <- data.frame(variable = "my_letters", type = "select-many", miss_pct = 10,
+#'                 options = letters[1:5], labels = letters[1:5], max_opts = 3,
+#'                 probability_1 = 9:5, probability_2 = 1:5)
+#' 
+#' sample_many(var = "my_letters", d = d, count = 10)
+#' 
+#' @export
 
 sample_many <- function(var, d, count = 100) {
   d <- dplyr::filter(d, variable == var)
@@ -53,7 +66,7 @@ sample_many <- function(var, d, count = 100) {
         dplyr::left_join(lbl, by = "var") |>
         dplyr::mutate(lbl = ifelse(is.na(lbl) | lbl == "", "delete", lbl))
       tp_t <- tidyr::pivot_wider(tt, names_from = "var", values_from = "lbl") |>
-        dplyr::select(-delete)
+        dplyr::select(-dplyr::contains("delete"))
       
       tp <- dplyr::full_join(tp, tp_t, by = "id") 
       

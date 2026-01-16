@@ -1,6 +1,11 @@
 #' Create fictional IP addresses
 #' 
 #' @param count integer; number of responses
+#' 
+#' @examples
+#' sample_ip(count = 5)
+#' 
+#' @export
 
 
 sample_ip <- function(count) {

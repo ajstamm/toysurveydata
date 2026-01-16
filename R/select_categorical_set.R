@@ -14,6 +14,7 @@
 #' 
 #' select_categorical_set(d, count = 10)
 #' 
+#' @export
 
 select_categorical_set <- function(d, count) {
   dt <- unique(d$variable[which(d$type == "select-one")])

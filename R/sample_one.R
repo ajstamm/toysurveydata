@@ -13,7 +13,7 @@
 #' @examples
 #' sample_one(options = letters[1:3], probs = 1:3, count = 10, miss_pct = 20)
 #' 
-#' 
+#' @export
 
 
 sample_one <- function(options, probs, count = 100, miss_pct = 10) {
