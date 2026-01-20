@@ -1,3 +1,9 @@
+#' @importFrom rlang :=
+NULL
+
+# hacky workaround for false positive notes
+utils::globalVariables(c("variable", "temp"))
+
 #' Create a set of single-selection continuous variables
 #' 
 #' @param d     dataset containing variable details
@@ -10,6 +16,7 @@
 #' select_continuous_set(d, count = 10)
 #' 
 #' @export
+#' 
 
 select_continuous_set <- function(d, count) {
   dt <- unique(d$variable[which(d$type == "normal")])

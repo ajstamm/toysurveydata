@@ -1,3 +1,8 @@
+# hacky workaround for false positive notes
+utils::globalVariables(c("v1", "variable", "temp", "delete"))
+
+
+
 #' Calculate multiple booleans
 #' 
 #' This function provides up to the maximum allowed number of responses. Some 
@@ -56,8 +61,9 @@ sample_many <- function(var, d, count = 100) {
   lbl <- data.frame(var = d$options, lbl = d$labels)
   tt <- dplyr::select(t, id, var = v1) |> dplyr::left_join(lbl, by = "var") |>
     dplyr::mutate(lbl = ifelse(is.na(lbl) | lbl == "", "delete", lbl))
-  tp <- tidyr::pivot_wider(tt, names_from = "var", values_from = "lbl") |>
-    dplyr::select(-delete)
+  tp <- tidyr::pivot_wider(tt, names_from = "var", values_from = "lbl") 
+  
+  if ("delete" %in% names(tp)) tp <- dplyr::select(tp, -delete)
   
   if (max_opts > 1) {
     for (i in 2:max_opts) {

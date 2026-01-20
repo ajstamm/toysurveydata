@@ -1,3 +1,10 @@
+#' @importFrom rlang :=
+NULL
+
+# hacky workaround for false positive notes
+utils::globalVariables(c("variable", "temp", "delete"))
+
+
 #' Create a set of single-selection categorical variables
 #' 
 #' @param d     dataset containing variable details
@@ -15,6 +22,7 @@
 #' select_categorical_set(d, count = 10)
 #' 
 #' @export
+#' 
 
 select_categorical_set <- function(d, count) {
   dt <- unique(d$variable[which(d$type == "select-one")])
