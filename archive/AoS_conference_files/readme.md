@@ -1,6 +1,6 @@
 # LHD AoS conference 2026
 
-I was asked to co-present a workshop at the Local Health Department Academy of Science 2026 Conference on how to clean and validate Community Health Assessment (CHA) data. Since CHA data are considered protected data, I needed to create a fake dataset for the workshop. I chose some questions from actual CHAs in Minnesota, which were slightly modified by my co-presenter based on her CHA work in Kentucky. 
+I was asked to co-present a workshop at the [Local Health Department Academy of Science](https://lhdacademyofscience.org/) 2026 Conference on how to clean and validate Community Health Assessment (CHA) data. Since CHA data are considered protected data, I needed to create a fake dataset for the workshop. I chose some questions from actual CHAs in Minnesota, which were slightly modified by my co-presenter based on her CHA work in Kentucky. 
 
 When I built the dataset below, I used US census populations to assign probabilities for Minnesota counties and Gallup poll estimates to assign probabilities for several of the demographic questions.
 
@@ -22,5 +22,6 @@ Files used to build the dataset, in case you want to create your own:
 	* calculating respondent ages and regions of residence
 	* introducing deliberate errors
 	* adding text field responses
+
 
 
