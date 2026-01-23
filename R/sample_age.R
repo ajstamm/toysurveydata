@@ -19,12 +19,6 @@ sample_age <- function(start_date, end_date = Sys.Date(), error = TRUE) {
   d <- dplyr::mutate(d, id = 1:nrow(d),
                      age = lubridate::year(lubridate::as.period(
                            lubridate::interval(start, end))))
-  if (error) {
-    d <- dplyr::mutate(d,
-      diff = sample(c(-1, 0, 1, 5, 10, 100), prob = c(5, 100, 5, 1, 5, .2), 
-                    size = nrow(d), replace = TRUE),
-      age = ifelse(age < 100, age + diff, age),
-      age = ifelse(diff == 10, round(age / 10) * 10, age)) 
-  }
+  if (error) d$age <- sampling_error(round(d$age))
   return(d$age)
 }
