@@ -12,7 +12,7 @@ If you are attending the workshop, please download these.
 	* running the code to create it
 	* making a few manual adjustments to ensure examples for some validation checks
 	* uploading to and redownloading from Alchemer
-* [Data_cleaning_aos_2026.pdf](Data_cleaning_aos_2026.pdf): slides used for the workshop
+* [Data_Cleaning_LHD AoS_2026.pdf](Data_Cleaning_LHD AoS_2026.pdf): slides used for the workshop
 
 ## Files used to build the dataset
 
@@ -32,6 +32,7 @@ Blair, Lyndsey, and Stamm, Abigail. *Mind the Mess: Preparing Survey Data for Pu
 Analysis*. Local Health Department Academy of Science National Conference. Virtual, January 28, 2026.
 
 I will include a link to the workshop recording when it is available.
+
 
 
 
