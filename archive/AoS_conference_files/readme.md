@@ -25,10 +25,11 @@ Feel free to try them to create your own dataset.
   	* introducing deliberate errors
   	* adding text field responses
 
-## Citation
+## Workshop citation
 
 Blair, Lyndsey, and Stamm, Abigail. *Mind the Mess: Preparing Survey Data for Public Health
 Analysis*. Local Health Department Academy of Science National Conference. Virtual, January 28, 2026.
 
 I will include a link to the workshop recording when it is available.
+
 
