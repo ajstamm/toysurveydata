@@ -10,7 +10,7 @@ This R package began as a project to create a simple fake dataset based on annua
 
 This package was built initially to generate responses for individual categorical questions based on *a priori* knowledge of response proportions. Some numeric variable and date handling were added later, mostly based on normal distributions.
 
-Functions can be used individually, but it is designed to allow you to build a settings table, then run the functions on that table to generate the full dataset. 
+While functions can be used individually, the package is designed to allow you to build a settings table, then run most functions on that table to generate the full dataset. 
 
 ## Limitations of this package
 
@@ -18,6 +18,18 @@ This package is designed to be very simple. It does not consider relationships b
 
 ## Getting started
 
-(To do: build vignette and embed sample table.)
+This package is still in active development, so you may get errors if you try to install it directly from GitHub. In the meantime, clone the package and run `devtools::load_all()` to load and use the functions.
 
-To create your dataset, you need to read in a table of settings in a specific format. The package is designed so that if your table is set up correctly, you can run all functions on that one table.
+(To do: finish setting up the package to be installable.)
+
+To create your dataset, you need to read in a table of settings in a specific format. The package is designed so that if your table is set up correctly, you can run all functions on that one table. 
+
+(To do: add a link to the vignette, and set up pkgdown.)
+
+## Future plans
+
+1. Add an option in the select-many functions to require an exact number of selections
+1. Add a function to handle ranked choice questions
+1. Add error-creation functions for text and numeric values 
+    1. Text: random upper/lower-case, misspellings
+    1. Numeric: round to nearest 5 or 10, off by 1, switch positive/negative, false 0
