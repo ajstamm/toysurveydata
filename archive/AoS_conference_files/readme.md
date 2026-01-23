@@ -2,7 +2,9 @@
 
 I was asked to co-present a workshop at the [Local Health Department Academy of Science (LHD AoS) Conference](https://lhdacademyofscience.org/aos-national-conference/) for 2026 on how to clean and validate Community Health Assessment (CHA) data. Since CHA data are considered protected data in Minnesota, I needed to create a fake dataset for the workshop. I chose some questions from actual Minnesota CHAs, which were then modified by my co-presenter, Lyndsey Blair, based on her CHA work in Kentucky. 
 
-Files used in my presentation for the 2026 AoS conference:
+## Files used in our workshop
+
+If you are attending the workshop, please download these.
 
 * [cha_codebook.xlsx](cha_codebook.xlsx): the codebook that describes the data.
 * [Survey_Mind-the-Mess.pdf](Survey_Mind-the-Mess.pdf): the survey instrument in portable document format (PDF), downloaded from Alchemer.
@@ -11,7 +13,9 @@ Files used in my presentation for the 2026 AoS conference:
 	* making a few manual adjustments to ensure examples for some validation checks
 	* uploading to and redownloading from Alchemer
 
-Files used to build the dataset, in case you want to create your own:
+## Files used to build the dataset
+
+Feel free to try them to create your own dataset.
 
 * [cha_probabilities.csv](cha_probabilities.csv): the settings dataset on which I ran the package functions. I used US census populations to assign probabilities for Minnesota counties and Gallup poll estimates to assign probabilities for several of the demographic questions.
 * [health_priority_options.csv](health_priority_options.csv): the optional responses for the open text question about health priorities.
@@ -21,9 +25,10 @@ Files used to build the dataset, in case you want to create your own:
   	* introducing deliberate errors
   	* adding text field responses
 
-Conference presentation details (link to the recording will be added when available):
+## Citation
 
 Blair, Lyndsey, and Stamm, Abigail. *Mind the Mess: Preparing Survey Data for Public Health
 Analysis*. Local Health Department Academy of Science National Conference. Virtual, January 28, 2026.
 
+I will include a link to the workshop recording when it is available.
 
