@@ -10,7 +10,7 @@ vignette: >
 ---
 
 ```{r, include = FALSE}
-knitr::opts_chunk$set(collapse = TRUE, comment = "#>")
+knitr::opts_chunk$set(collapse = TRUE, comment = "#>", message = FALSE, warning = FALSE)
 devtools::load_all("../R")
 ```
 
@@ -178,7 +178,7 @@ I created the age function to meet my very specific needs, which required incorr
 
 This function is not run using the settings table. It takes three inputs, start date, end date, and whether to include error. The only variable returned is age. In the example below, all dates in our date example were from 2025, so all ages will be 25 unless we introduce error. 
 
-```{r, make_age}
+```{r, make_age, warning=FALSE}
 # since the chance of error is low, we will artificially increase the number of records
 end_dates = rep(datedata$my_dates, 10) # enter 50 end dates instead of 5
 age <- sample_age(start_date = "2000-01-01", end_date = end_dates, error = TRUE)
