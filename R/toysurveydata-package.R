@@ -1,6 +1,5 @@
 #' Toy Survey Data
 #' 
-#' @keywords internal
 #' 
 #' @description
 #' This package contains funtions to create fake survey data. It contains the following functions, 
@@ -8,6 +7,7 @@
 #' 
 #' 
 #' 
+#' @keywords internal
 "_PACKAGE"
 
 ## usethis namespace: start
