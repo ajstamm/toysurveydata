@@ -58,8 +58,8 @@ datedata <- select_dates_set(d = date, count = 5)
 ## ----make_ip------------------------------------------------------------------
 ipdata <- sample_ip(count = 5)
 
-## ----make_age, warning=FALSE--------------------------------------------------
+## ----make_age, warning = FALSE------------------------------------------------
 # since the chance of error is low, we will artificially increase the number of records
-end_dates = rep(datedata$my_dates, 10) # enter 50 end dates instead of 5
+end_dates = rep(datedata$my_dates, 50) # enter 50 end dates instead of 5
 age <- sample_age(start_date = "2000-01-01", end_date = end_dates, error = TRUE)
 
