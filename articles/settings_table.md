@@ -294,16 +294,14 @@ error.
 
 ``` r
 # since the chance of error is low, we will artificially increase the number of records
-end_dates = rep(datedata$my_dates, 50) # enter 50 end dates instead of 5
+end_dates = rep(datedata$my_dates, 10) # enter 50 end dates instead of 5
 age <- sample_age(start_date = "2000-01-01", end_date = end_dates, error = TRUE)
 ```
 
 | age | Freq |
 |:----|-----:|
-| 24  |    9 |
-| 25  |  178 |
-| 26  |   12 |
-| 125 |    1 |
-| NA  |   50 |
+| 25  |   39 |
+| 26  |    1 |
+| NA  |   10 |
 
 Table 10. Frequency table of age data with errors
