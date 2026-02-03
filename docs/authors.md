@@ -8,7 +8,7 @@
 ## Citation
 
 Source:
-[`DESCRIPTION`](https://github.com/ajstamm/toy_survey_data/blob/HEAD/DESCRIPTION)
+[`DESCRIPTION`](https://github.com/ajstamm/toysurveydata/DESCRIPTION)
 
 Stamm A (2026). *toysurveydata: Create Toy Survey Data*. R package
 version 1.0.0, <https://github.com/ajstamm/toy_survey_data>.

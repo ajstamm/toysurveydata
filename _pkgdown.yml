@@ -1,4 +1,38 @@
+title: Toy Survey Data
 url: https://ajstamm.github.io/toysurveydata/
 template:
   bootstrap: 5
+  params:
+    bootswatch: cerulean
+
+repo:
+  url:
+    home: https://ajstamm.github.io/toysurveydata/
+    source: https://github.com/ajstamm/toysurveydata/
+    issue: https://github.com/ajstamm/toysurveydata/issues/
+    user: https://github.com/ajstamm/
+
+navbar:
+  type: inverse
+
+reference:
+- title: "Multiple variable creators"
+  desc: "Functions that calulate sets of variables"
+- contents:
+  - select_categorical_set
+  - select_many_set
+  - select_continuous_set
+  - select_dates_set
+- title: "Single variable creators"
+  desc: "Functions that calulate single variables"
+- contents:
+  - sample_one
+  - sample_many
+  - sample_ip
+- title: "Data manipulators"
+  desc: "Functions that derive variables or add error to variables"
+- contents:
+  - sample_age
+  - sampling_error
+
 
