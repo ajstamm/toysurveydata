@@ -31,5 +31,5 @@ Suggests:
 RoxygenNote: 7.3.3
 VignetteBuilder: knitr
 Roxygen: list(markdown = TRUE)
-URL: https://github.com/ajstamm/toy_survey_data
+URL: https://github.com/ajstamm/toy_survey_data, https://ajstamm.github.io/toysurveydata/
 BugReports: https://github.com/ajstamm/toy_survey_data/issues

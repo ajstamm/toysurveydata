@@ -1,3 +1,7 @@
+
+utils::globalVariables(c("report_count"))
+
+
 #' Add sampling data errors
 #' 
 #' @param var  Vector of values to be modified

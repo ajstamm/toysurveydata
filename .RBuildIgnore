@@ -1,0 +1,8 @@
+^archive$
+^doc$
+^LICENSE\.md$
+^Meta$
+^_pkgdown\.yml$
+^docs$
+^pkgdown$
+^\.github$
