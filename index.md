@@ -25,12 +25,6 @@ While functions can be used individually, the package is designed to
 allow you to build a settings table, then run most functions on that
 table to generate the full dataset.
 
-## Limitations of this package
-
-This package is designed to be very simple. It does not consider
-relationships between variables. It includes optional missingness, but
-it does not include error creation.
-
 ## Getting started
 
 This package is still in active development, so you may get errors if
@@ -39,20 +33,30 @@ package and run
 [`devtools::load_all()`](https://devtools.r-lib.org/reference/load_all.html)
 to load and use the functions.
 
-(To do: finish setting up the package to be installable.)
-
-To create your dataset, you need to read in a table of settings in a
-specific format. The package is designed so that if your table is set up
+To create your dataset, you will need to read in a table of settings in
+a specific format. You can learn how to set up your table by reading the
+[Settings Table
+Design](https://ajstamm.github.io/toysurveydata/articles/settings_table.html)
+vignette. The package is designed so that if your table is set up
 correctly, you can run all functions on that one table.
 
-(To do: add a link to the vignette, and set up pkgdown.)
+## Limitations of this package
+
+This package is designed to be very simple. It does not consider
+relationships between variables. It includes optional missingness and a
+function to introduce random error of different kinds to data in a
+numeric variable.
 
 ## Future plans
 
-1.  Add an option in the select-many functions to require an exact
-    number of selections
+1.  Add an option in the select-many function to require an exact number
+    of selections
 2.  Add a function to handle ranked choice questions
-3.  Add error-creation functions for text and numeric values
-    1.  Text: random upper/lower-case, misspellings
-    2.  Numeric: round to nearest 5 or 10, off by 1, switch
-        positive/negative, false 0
+3.  Add error-creation functions for text values such as random
+    upper/lower-case, misspellings
+4.  Rethink or improve instructions for percent missing and number of
+    options in the settings table
+5.  Maybe integrate with or suggest packages that handle things like
+    random addresses
+6.  Maybe make the IP function at least nominally geographically
+    sensitive
