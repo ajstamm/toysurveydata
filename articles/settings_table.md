@@ -296,12 +296,6 @@ error.
 # since the chance of error is low, we will artificially increase the number of records
 end_dates = rep(datedata$my_dates, 10) # enter 50 end dates instead of 5
 age <- sample_age(start_date = "2000-01-01", end_date = end_dates, error = TRUE)
-#> Warning: There were 2 warnings in `dplyr::mutate()`.
-#> The first warning was:
-#> ℹ In argument: `var = dplyr::case_when(...)`.
-#> Caused by warning:
-#> ! NAs introduced by coercion
-#> ℹ Run `dplyr::last_dplyr_warnings()` to see the 1 remaining warning.
 ```
 
 | age | Freq |
