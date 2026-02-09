@@ -54,9 +54,10 @@ numeric variable.
 2.  Add a function to handle ranked choice questions
 3.  Add error-creation functions for text values such as random
     upper/lower-case, misspellings
-4.  Rethink or improve instructions for percent missing and number of
+4.  Add non-random missingness
+5.  Rethink or improve instructions for percent missing and number of
     options in the settings table
-5.  Maybe integrate with or suggest packages that handle things like
+6.  Maybe integrate with or suggest packages that handle things like
     random addresses
-6.  Maybe make the IP function at least nominally geographically
+7.  Maybe make the IP function at least nominally geographically
     sensitive
