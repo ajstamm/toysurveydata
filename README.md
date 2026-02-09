@@ -28,6 +28,8 @@ This package is designed to be very simple. It does not consider relationships b
 1. Add an option in the select-many function to require an exact number of selections
 1. Add a function to handle ranked choice questions
 1. Add error-creation functions for text values such as random upper/lower-case, misspellings
+2. Add non-random missingness
 1. Rethink or improve instructions for percent missing and number of options in the settings table
 1. Maybe integrate with or suggest packages that handle things like random addresses
 1. Maybe make the IP function at least nominally geographically sensitive
+
