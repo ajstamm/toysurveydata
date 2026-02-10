@@ -15,13 +15,13 @@ While functions can be used individually, the package is designed to allow you t
 
 ## Getting started
 
-This package is still in active development, so you may get errors if you try to install it directly from GitHub. In the meantime, clone the package and run `devtools::load_all()` to load and use the functions.
+This package is still in active development, but you can install it directly from GitHub using the code `devtools::install_github("ajstamm/toysurveydata")`.
 
-To create your dataset, you will need to read in a table of settings in a specific format. You can learn how to set up your table by reading the [Settings Table Design](https://ajstamm.github.io/toysurveydata/articles/settings_table.html) vignette. The package is designed so that if your table is set up correctly, you can run all functions on that one table. 
+To create your dataset, you will need to read in a table of pre-defined variable settings. Learn how to set up your table in the [Settings Table Design](https://ajstamm.github.io/toysurveydata/articles/settings_table.html) vignette. The package is designed so that if your table is set up correctly, you can run nearly all functions on that one table. 
 
 ## Limitations of this package
 
-This package is designed to be very simple. It does not consider relationships between variables. It includes optional missingness and a function to introduce random error of different kinds to data in a numeric variable. 
+This package is designed to be very simple and easy to run. It does not consider relationships between variables. It includes optional missingness and a function to introduce random error of different kinds to your data. 
 
 ## Future plans
 
@@ -32,4 +32,5 @@ This package is designed to be very simple. It does not consider relationships b
 1. Rethink or improve instructions for percent missing and number of options in the settings table
 1. Maybe integrate with or suggest packages that handle things like random addresses
 1. Maybe make the IP function at least nominally geographically sensitive
+
 
