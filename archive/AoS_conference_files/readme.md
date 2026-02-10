@@ -2,6 +2,25 @@
 
 I was asked to co-present a workshop at the [Local Health Department Academy of Science (LHD AoS) Conference](https://lhdacademyofscience.org/aos-national-conference/) for 2026 on how to clean and validate Community Health Assessment (CHA) data. Since CHA data are considered protected data in Minnesota, I needed to create a fake dataset for the workshop. I chose some questions from actual Minnesota CHAs, which were then modified by my co-presenter, Lyndsey Blair, based on her CHA work in Kentucky. 
 
+## Requirements of the dataset
+
+For our presentation, we required a dataset that was messy and that could be used to illustrate ways to check and clean data. To that end, our dataset would need to contain the following:
+
+1. IP addresses
+2. At least two numeric variables that could be used for calculation (we chose height and weight)
+3. A Likert scale question (we chose general health poor to excellent)
+4. A "select many" question (we chose where to go for medical care)
+5. Age that might not match birthdate and that contained outliers
+6. Missingness for all questions
+7. Counties that were not all coded the same way (e.g. Ramsey, RAMSEY, ramsey)
+
+When I built the accompanying package, I added the following:
+
+1. An easy way to define, track, and update settings
+1. Functions that could be run easily with little skill in R
+2. A vignette and an example script of how to run the functions and combine the variables into a full dataset
+
+
 ## Files used in our workshop
 
 If you are attending the workshop, please download these.
@@ -29,3 +48,4 @@ Feel free to try them to create your own dataset.
 ## Workshop citation
 
 Blair, Lyndsey, and Stamm, Abigail. [*Mind the Mess: Preparing Survey Data for Public Health Analysis*](https://www.youtube.com/watch?v=vXi0rsggKHQ). Local Health Department Academy of Science National Conference. Virtual, January 28, 2026.
+
