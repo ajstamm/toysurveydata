@@ -17,14 +17,14 @@ navbar:
 
 reference:
 - title: "Multiple variable creators"
-  desc: "Functions that calulate sets of variables"
+  desc: "Functions that calculate sets of variables"
 - contents:
   - select_categorical_set
   - select_many_set
   - select_continuous_set
   - select_dates_set
 - title: "Single variable creators"
-  desc: "Functions that calulate single variables"
+  desc: "Functions that calculate single variables"
 - contents:
   - sample_one
   - sample_many
