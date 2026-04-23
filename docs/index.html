@@ -35,7 +35,8 @@
 <li class="nav-item dropdown">
   <button class="nav-link dropdown-toggle" type="button" id="dropdown-articles" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Articles</button>
   <ul class="dropdown-menu" aria-labelledby="dropdown-articles">
-<li><a class="dropdown-item" href="articles/settings_table.html">Settings table design</a></li>
+<li><a class="dropdown-item" href="articles/categorical_variables.html">Simulating categorical variables</a></li>
+    <li><a class="dropdown-item" href="articles/settings_table.html">Settings table design</a></li>
   </ul>
 </li>
       </ul>
@@ -53,44 +54,58 @@
   <main id="main" class="col-md-9"><div class="section level1">
 <div class="page-header"><h1 id="toy-survey-data">Toy Survey Data<a class="anchor" aria-label="anchor" href="#toy-survey-data"></a>
 </h1></div>
-<p>An R package designed to simplify the process of creating fake survey data.</p>
+<p>An R package designed to simplify the process of creating synthetic survey data.</p>
 <div class="section level2">
 <h2 id="why-create-this-package">Why create this package?<a class="anchor" aria-label="anchor" href="#why-create-this-package"></a>
 </h2>
-<p>This R package began as a project to create a simple fake dataset based on annual Community Health Assessment surveys. I was preparing to give a presentation on cleaning and validating survey data, but I did not have access to real survey data, for which privacy and confidentiality are major concerns. I reviewed some existing survey creation packages, but they either did not allow the level of customization I needed or used models that read in real data, which I did not have, as a starting point.</p>
+<p>This package began as a project to create a simple synthetic dataset based on Community Health Assessment surveys. I was preparing a presentation on cleaning and validating survey data, but I could not use real survey data, for which privacy and confidentiality are major concerns. I reviewed some existing survey creation packages, but they either did not allow the level of customization I needed or used models that read in real data, which I did not have, as a starting point. I also wanted a tool that did not require much knowledge in modeling or coding.</p>
 </div>
 <div class="section level2">
 <h2 id="what-does-this-package-do">What does this package do?<a class="anchor" aria-label="anchor" href="#what-does-this-package-do"></a>
 </h2>
-<p>This package was built initially to generate responses for individual categorical questions based on <em>a priori</em> knowledge of response proportions. Some numeric variable and date handling were added later, mostly based on normal distributions.</p>
-<p>While functions can be used individually, the package is designed to allow you to build a settings table, then run most functions on that table to generate the full dataset.</p>
-</div>
-<div class="section level2">
-<h2 id="limitations-of-this-package">Limitations of this package<a class="anchor" aria-label="anchor" href="#limitations-of-this-package"></a>
-</h2>
-<p>This package is designed to be very simple. It does not consider relationships between variables. It includes optional missingness, but it does not include error creation.</p>
+<p>The <code>toysurveydata</code> package is designed to be a quick, easy way to create synthetic data that mimic real data structures for the following purposes:</p>
+<ul>
+<li>to test workflows and error handling</li>
+<li>to teach data management</li>
+</ul>
+<p>It generates individual responses for categorical questions based on <em>a priori</em> knowledge of response proportions. It contains functions to handle numeric and date variables. Most functions include an option to add missingness and one function adds error to numeric data.</p>
 </div>
 <div class="section level2">
 <h2 id="getting-started">Getting started<a class="anchor" aria-label="anchor" href="#getting-started"></a>
 </h2>
-<p>This package is still in active development, so you may get errors if you try to install it directly from GitHub. In the meantime, clone the package and run <code><a href="https://devtools.r-lib.org/reference/load_all.html" class="external-link">devtools::load_all()</a></code> to load and use the functions.</p>
-<p>(To do: finish setting up the package to be installable.)</p>
-<p>To create your dataset, you need to read in a table of settings in a specific format. The package is designed so that if your table is set up correctly, you can run all functions on that one table.</p>
-<p>(To do: add a link to the vignette, and set up pkgdown.)</p>
+<p>To install this package directly from GitHub, run the following code:</p>
+<pre><code><span><span class="co"># install devtools if you do not already have it</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"devtools"</span><span class="op">)</span></span>
+<span><span class="co"># install toysurveydata with all required packages from CRAN</span></span>
+<span><span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://devtools.r-lib.org/reference/install-deprecated.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"ajstamm/toysurveydata"</span>, dependencies <span class="op">=</span> <span class="cn">TRUE</span>,</span>
+<span>                         build_vignette <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code></pre>
+<p>While functions can be used individually, the package is designed to allow you to build a settings table as described in the <a href="https://ajstamm.github.io/toysurveydata/articles/settings_table.html">Settings Table Design</a> vignette, then run most functions on that table to generate the full dataset.</p>
 </div>
 <div class="section level2">
-<h2 id="future-plans">Future plans<a class="anchor" aria-label="anchor" href="#future-plans"></a>
+<h2 id="limitations-of-this-package">Limitations of this package<a class="anchor" aria-label="anchor" href="#limitations-of-this-package"></a>
 </h2>
+<p>This package is designed to be very simple. It would <em>not</em> be appropriate for research.</p>
+<p>This package does not perform any special modeling and does not require existing data. Most functions calculate only one variable at a time and do not take into account values of or relationships with other variables. It includes optional missingness and a function to introduce random error of different kinds to data in a numeric variable.</p>
+</div>
+<div class="section level2">
+<h2 id="possible-future-plans">Possible future plans<a class="anchor" aria-label="anchor" href="#possible-future-plans"></a>
+</h2>
+<details><summary>
+Click to expand
+</summary><p>If you would like to see any of these, add an issue with an example of what you need them for.</p>
+<p>Function changes</p>
 <ol style="list-style-type: decimal">
-<li>Add an option in the select-many functions to require an exact number of selections</li>
+<li>Add an option in the select-many function to require an exact number of selections</li>
 <li>Add a function to handle ranked choice questions</li>
-<li>Add error-creation functions for text and numeric values
+<li>Add error-creation functions for text values such as random upper/lower-case, misspellings</li>
+<li>Add non-random missingness</li>
+<li>Maybe make the IP function at least nominally geographically sensitive</li>
+</ol>
+<p>Documentation changes</p>
 <ol style="list-style-type: decimal">
-<li>Text: random upper/lower-case, misspellings</li>
-<li>Numeric: round to nearest 5 or 10, off by 1, switch positive/negative, false 0</li>
-</ol>
-</li>
-</ol>
+<li>Rethink or improve instructions for percent missing and number of options in the settings table</li>
+<li>Maybe integrate with or suggest packages that handle things like random addresses</li>
+</ol></details>
 </div>
 </div>
   </main><aside class="col-md-3"><div class="links">
