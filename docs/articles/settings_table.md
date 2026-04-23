@@ -110,13 +110,13 @@ cat2 <- data.frame(
 )
 ```
 
-| variable | type | options | probability_1 | miss_pct | labels | probability_2 | max_opts |
-|:---|:---|:---|---:|---:|:---|---:|---:|
-| my_letters | select-many | a | 1 | 5 | a | 5 | 3 |
-| my_letters | select-many | b | 2 | 5 | b | 4 | 3 |
-| my_letters | select-many | c | 3 | 5 | c | 3 | 3 |
-| my_letters | select-many | d | 4 | 5 | d | 2 | 3 |
-| my_letters | select-many | e | 5 | 5 | e | 1 | 3 |
+| variable   | type        | options | probability_1 | miss_pct | labels | probability_2 | max_opts |
+|:-----------|:------------|:--------|--------------:|---------:|:-------|--------------:|---------:|
+| my_letters | select-many | a       |             1 |        5 | a      |             5 |        3 |
+| my_letters | select-many | b       |             2 |        5 | b      |             4 |        3 |
+| my_letters | select-many | c       |             3 |        5 | c      |             3 |        3 |
+| my_letters | select-many | d       |             4 |        5 | d      |             2 |        3 |
+| my_letters | select-many | e       |             5 |        5 | e      |             1 |        3 |
 
 Table 3. Example settings for multiple item selection categorical data
 
