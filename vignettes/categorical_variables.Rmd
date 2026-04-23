@@ -2,27 +2,21 @@
 title: "Simulating categorical variables"
 author: "Abigail Stamm"
 date: "`r Sys.Date()`"
-format: 
-  html:
-    toc: true
+output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{Simulating categorical variables}
-  %\VignetteEngine{quarto::html}
+  %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
 
-```{r}
-#| include: FALSE
-
+```{r, include=FALSE}
 knitr::opts_chunk$set(collapse = TRUE, comment = "#>", 
                       message = FALSE, warning = FALSE)
 devtools::load_all("../R")
 ```
 
 
-```{r, table_function}
-#| include: FALSE
-
+```{r table_function, include=FALSE}
 plot_table <- function(df, caption = "") {
   if (nrow(df) < 6) {
     base_options <- list(dom = 't', ordering = FALSE)
@@ -37,8 +31,6 @@ plot_table <- function(df, caption = "") {
                       caption = caption)
   return(dt)
 }
-
-
 ```
 
 This vignette covers the basics of creating categorical variables. I would like your feedback on some of the features I am considering adding. For other variable types, please see the [Settings Table Design](https://ajstamm.github.io/toysurveydata/articles/settings_table.html) vignette.
@@ -49,9 +41,10 @@ The `toysurveydata` package is designed to be a quick, easy way to create synthe
 * to teach data management
 
 
-:::{.callout-warning collapse = 'true' title = 'When *not* to use `toysurveydata`'}
+<details><summary>When *not* to use `toysurveydata`</summary>
+
 This package does not perform any special modeling and does not require existing data. Most functions calculate only one variable at a time and do not take into account the values of or relationships with other variables. This package would *not* be appropriate for research.
-:::
+</details>
 
 Most of the functions in this package read in a settings table that follows a specific data schema. The settings table should be populated with values and probabilities based on the results of past surveys and research.
 
@@ -130,12 +123,12 @@ For categorical data where multiple items can be selected, your table should con
     * If there are multiple values for "miss_pct", the function uses the maximum non-missing value. 
     * If all values for "miss_pct" are missing, "miss_pct" is set to 0.
 
-:::{.callout-note collapse = 'true' title = 'Future multiple item selection features under consideration'}
-1. Adding an option to skip the step that removes additional values when a record is assigned "none" to provide messier data for teaching data validation and cleaning.
-2. Adding an option to force records that were not assigned "none" to be assigned exactly "max_opts" values.
-3. Adding an option to set unchecked values as something other than missing when at least one value is checked.
-4. If "max_opts" is missing, setting "max_opts" to the total number of values.
-:::
+<details><summary>Future multiple item selection features under consideration</summary>
+1. Add an option to skip the step that removes additional values when a record is assigned "none" to provide messier data for teaching data validation and cleaning.
+2. Add an option to force records that were not assigned "none" to be assigned exactly "max_opts" values.
+3. Add an option to set unchecked values as something other than missing when at least one value is checked.
+4. If "max_opts" is missing, set "max_opts" to the total number of values.
+</details>
 
 ### Response dataset
 
