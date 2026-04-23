@@ -2,7 +2,7 @@
 
 ## Multiple variable creators
 
-Functions that calulate sets of variables
+Functions that calculate sets of variables
 
 - [`select_categorical_set()`](https://ajstamm.github.io/toysurveydata/reference/select_categorical_set.md)
   : Create a set of single-selection categorical variables
@@ -15,7 +15,7 @@ Functions that calulate sets of variables
 
 ## Single variable creators
 
-Functions that calulate single variables
+Functions that calculate single variables
 
 - [`sample_one()`](https://ajstamm.github.io/toysurveydata/reference/sample_one.md)
   : Create a random vector of responses
