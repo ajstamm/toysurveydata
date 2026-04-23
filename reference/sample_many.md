@@ -33,16 +33,16 @@ d <- data.frame(variable = "my_letters", type = "select-many", miss_pct = 10,
 
 sample_many(var = "my_letters", d = d, count = 10)
 #> # A tibble: 10 × 6
-#>       id c     e     a     d     b    
+#>       id d     b     e     a     c    
 #>    <int> <chr> <chr> <chr> <chr> <chr>
-#>  1     1 c     NA    a     NA    b    
-#>  2     2 c     NA    a     NA    NA   
-#>  3     3 NA    e     a     d     NA   
-#>  4     4 NA    e     NA    d     NA   
-#>  5     5 c     NA    a     d     NA   
-#>  6     6 NA    NA    NA    d     b    
-#>  7     7 c     e     NA    NA    b    
-#>  8     8 c     NA    NA    d     NA   
-#>  9     9 c     e     NA    d     NA   
-#> 10    10 c     NA    NA    NA    b    
+#>  1     1 NA    b     e     NA    c    
+#>  2     2 d     NA    e     NA    NA   
+#>  3     3 d     NA    e     NA    c    
+#>  4     4 NA    NA    NA    a     c    
+#>  5     5 d     NA    e     NA    NA   
+#>  6     6 d     b     e     NA    NA   
+#>  7     7 NA    b     NA    a     c    
+#>  8     8 NA    NA    NA    a     c    
+#>  9     9 d     NA    e     a     NA   
+#> 10    10 d     NA    e     NA    NA   
 ```

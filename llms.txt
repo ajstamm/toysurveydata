@@ -1,50 +1,69 @@
 # Toy Survey Data
 
-An R package designed to simplify the process of creating fake survey
-data.
+An R package designed to simplify the process of creating synthetic
+survey data.
 
 ## Why create this package?
 
-This R package began as a project to create a simple fake dataset based
-on annual Community Health Assessment surveys. I was preparing to give a
-presentation on cleaning and validating survey data, but I did not have
-access to real survey data, for which privacy and confidentiality are
-major concerns. I reviewed some existing survey creation packages, but
-they either did not allow the level of customization I needed or used
-models that read in real data, which I did not have, as a starting
-point.
+This package began as a project to create a simple synthetic dataset
+based on Community Health Assessment surveys. I was preparing a
+presentation on cleaning and validating survey data, but I could not use
+real survey data, for which privacy and confidentiality are major
+concerns. I reviewed some existing survey creation packages, but they
+either did not allow the level of customization I needed or used models
+that read in real data, which I did not have, as a starting point. I
+also wanted a tool that did not require much knowledge in modeling or
+coding.
 
 ## What does this package do?
 
-This package was built initially to generate responses for individual
-categorical questions based on *a priori* knowledge of response
-proportions. Some numeric variable and date handling were added later,
-mostly based on normal distributions.
+The `toysurveydata` package is designed to be a quick, easy way to
+create synthetic data that mimic real data structures for the following
+purposes:
 
-While functions can be used individually, the package is designed to
-allow you to build a settings table, then run most functions on that
-table to generate the full dataset.
+- to test workflows and error handling
+- to teach data management
+
+It generates individual responses for categorical questions based on *a
+priori* knowledge of response proportions. It contains functions to
+handle numeric and date variables. Most functions include an option to
+add missingness and one function adds error to numeric data.
 
 ## Getting started
 
-This package is still in active development, but you can install it
-directly from GitHub using the code
-`devtools::install_github("ajstamm/toysurveydata")`.
+To install this package directly from GitHub, run the following code:
 
-To create your dataset, you will need to read in a table of pre-defined
-variable settings. Learn how to set up your table in the [Settings Table
+    # install devtools if you do not already have it
+    install.packages("devtools")
+    # install toysurveydata with all required packages from CRAN
+    devtools::install_github("ajstamm/toysurveydata", dependencies = TRUE,
+                             build_vignette = TRUE)
+
+While functions can be used individually, the package is designed to
+allow you to build a settings table as described in the [Settings Table
 Design](https://ajstamm.github.io/toysurveydata/articles/settings_table.html)
-vignette. The package is designed so that if your table is set up
-correctly, you can run nearly all functions on that one table.
+vignette, then run most functions on that table to generate the full
+dataset.
 
 ## Limitations of this package
 
-This package is designed to be very simple and easy to run. It does not
-consider relationships between variables. It includes optional
-missingness and a function to introduce random error of different kinds
-to your data.
+This package is designed to be very simple. It would *not* be
+appropriate for research.
 
-## Future plans
+This package does not perform any special modeling and does not require
+existing data. Most functions calculate only one variable at a time and
+do not take into account values of or relationships with other
+variables. It includes optional missingness and a function to introduce
+random error of different kinds to data in a numeric variable.
+
+## Possible future plans
+
+Click to expand
+
+If you would like to see any of these, add an issue with an example of
+what you need them for.
+
+Function changes
 
 1.  Add an option in the select-many function to require an exact number
     of selections
@@ -52,12 +71,15 @@ to your data.
 3.  Add error-creation functions for text values such as random
     upper/lower-case, misspellings
 4.  Add non-random missingness
-5.  Rethink or improve instructions for percent missing and number of
-    options in the settings table
-6.  Maybe integrate with or suggest packages that handle things like
-    random addresses
-7.  Maybe make the IP function at least nominally geographically
+5.  Maybe make the IP function at least nominally geographically
     sensitive
+
+Documentation changes
+
+1.  Rethink or improve instructions for percent missing and number of
+    options in the settings table
+2.  Maybe integrate with or suggest packages that handle things like
+    random addresses
 
 # Package index
 
