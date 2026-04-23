@@ -34,5 +34,5 @@ sample_one(options, probs, count = 100, miss_pct = 10)
 
 ``` r
 sample_one(options = letters[1:3], probs = 1:3, count = 10, miss_pct = 20)
-#>  [1] "c" "c" NA  "c" "b" "c" "b" "c" "a" "b"
+#>  [1] "b" "c" "c" "b" "b" NA  "c" NA  "c" "c"
 ```

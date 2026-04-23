@@ -27,16 +27,16 @@ d <- data.frame(variable = "my_letters", type = "select-many", miss_pct = 10,
 
 select_many_set(d, count = 10)
 #> # A tibble: 10 × 6
-#>       id a     b     e     d     c    
+#>       id b     a     e     c     d    
 #>    <int> <chr> <chr> <chr> <chr> <chr>
-#>  1     1 NA    b     NA    d     NA   
-#>  2     2 NA    NA    e     NA    c    
-#>  3     3 NA    b     NA    NA    NA   
-#>  4     4 NA    b     NA    d     c    
-#>  5     5 a     NA    e     d     NA   
-#>  6     6 NA    b     e     NA    NA   
-#>  7     7 NA    b     NA    NA    c    
-#>  8     8 NA    b     NA    NA    c    
-#>  9     9 a     NA    e     NA    NA   
-#> 10    10 NA    b     NA    d     c    
+#>  1     1 b     NA    e     c     NA   
+#>  2     2 b     NA    NA    c     NA   
+#>  3     3 b     NA    e     NA    NA   
+#>  4     4 b     a     NA    c     NA   
+#>  5     5 NA    NA    NA    NA    d    
+#>  6     6 NA    NA    e     NA    d    
+#>  7     7 NA    NA    NA    c     d    
+#>  8     8 b     NA    e     NA    d    
+#>  9     9 b     NA    NA    c     NA   
+#> 10    10 NA    NA    NA    c     NA   
 ```
