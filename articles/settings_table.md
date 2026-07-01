@@ -47,6 +47,7 @@ For illustration, first create a simple data frame with each of these
 settings.
 
 ``` r
+
 cat1 <- data.frame(
   variable = "my_letters", # variable name in final dataset
   type = "select-one",     # string that triggers `select_categorical_set()`
@@ -65,6 +66,7 @@ cat1 <- data.frame(
 | my_letters | select-one | e       |             5 |       10 |
 
 Table 1. Example settings for single item selection categorical data
+{.table}
 
 After your dataset is created, run the
 [`select_categorical_set()`](https://ajstamm.github.io/toysurveydata/reference/select_categorical_set.md)
@@ -74,6 +76,7 @@ function and allows you to generate multiple variables at once, if your
 dataset contains many single item selection questions.
 
 ``` r
+
 cat1data <- select_categorical_set(d = cat1, count = 5)
 ```
 
@@ -85,7 +88,8 @@ cat1data <- select_categorical_set(d = cat1, count = 5)
 |   4 | e          |
 |   5 | e          |
 
-Table 2. Example single item selection categorical data
+Table 2. Example single item selection categorical data {.table
+style="width:40%;"}
 
 ## Categorical multiple item selection data
 
@@ -98,6 +102,7 @@ For illustration, first create a simple data frame with each of these
 settings.
 
 ``` r
+
 cat2 <- data.frame(
   variable = "my_letters", # variable name in final dataset
   type = "select-many",    # string that triggers `select_many_set()`
@@ -110,15 +115,16 @@ cat2 <- data.frame(
 )
 ```
 
-| variable   | type        | options | probability_1 | miss_pct | labels | probability_2 | max_opts |
-|:-----------|:------------|:--------|--------------:|---------:|:-------|--------------:|---------:|
-| my_letters | select-many | a       |             1 |        5 | a      |             5 |        3 |
-| my_letters | select-many | b       |             2 |        5 | b      |             4 |        3 |
-| my_letters | select-many | c       |             3 |        5 | c      |             3 |        3 |
-| my_letters | select-many | d       |             4 |        5 | d      |             2 |        3 |
-| my_letters | select-many | e       |             5 |        5 | e      |             1 |        3 |
+| variable | type | options | probability_1 | miss_pct | labels | probability_2 | max_opts |
+|:---|:---|:---|---:|---:|:---|---:|---:|
+| my_letters | select-many | a | 1 | 5 | a | 5 | 3 |
+| my_letters | select-many | b | 2 | 5 | b | 4 | 3 |
+| my_letters | select-many | c | 3 | 5 | c | 3 | 3 |
+| my_letters | select-many | d | 4 | 5 | d | 2 | 3 |
+| my_letters | select-many | e | 5 | 5 | e | 1 | 3 |
 
 Table 3. Example settings for multiple item selection categorical data
+{.table style="width:100%;"}
 
 After your dataset is created, run the
 [`select_many_set()`](https://ajstamm.github.io/toysurveydata/reference/select_many_set.md)
@@ -128,6 +134,7 @@ function and allows you to generate multiple variables at once, if your
 dataset contains many multiple item selection questions.
 
 ``` r
+
 cat2data <- select_many_set(d = cat2, count = 5)
 ```
 
@@ -139,7 +146,8 @@ cat2data <- select_many_set(d = cat2, count = 5)
 |   4 | NA  | NA  | b   | NA  |
 |   5 | NA  | e   | b   | NA  |
 
-Table 4. Example multiple item selection categorical data
+Table 4. Example multiple item selection categorical data {.table
+style="width:40%;"}
 
 ## Continuous data
 
@@ -157,6 +165,7 @@ For illustration, first create a simple data frame with each of these
 settings.
 
 ``` r
+
 cont <- data.frame(
   variable = "my_numbers", # variable name in final dataset
   type = "normal",         # string that triggers `select_many_set()`
@@ -172,7 +181,7 @@ cont <- data.frame(
 |:-----------|:-------|---------:|--------:|--------:|---------:|-------:|
 | my_numbers | normal |       20 |       0 |     100 |       75 |     10 |
 
-Table 5. Example settings for continuous data
+Table 5. Example settings for continuous data {.table}
 
 After your dataset is created, run the
 [`select_continuous_set()`](https://ajstamm.github.io/toysurveydata/reference/select_continuous_set.md)
@@ -181,6 +190,7 @@ generate multiple variables at once, if your dataset contains many
 continuous values response questions.
 
 ``` r
+
 contdata <- select_continuous_set(d = cont, count = 5)
 ```
 
@@ -192,7 +202,7 @@ contdata <- select_continuous_set(d = cont, count = 5)
 |   4 |         NA |
 |   5 |      80.12 |
 
-Table 6. Example continuous data
+Table 6. Example continuous data {.table style="width:40%;"}
 
 The function
 [`select_continuous_set()`](https://ajstamm.github.io/toysurveydata/reference/select_continuous_set.md)
@@ -216,6 +226,7 @@ For illustration, first create a simple data frame with each of these
 settings.
 
 ``` r
+
 date <- data.frame(
   variable = "my_dates", # variable name in final dataset
   type = "date",         # string that triggers `select_many_set()`
@@ -229,7 +240,7 @@ date <- data.frame(
 |:---------|:-----|---------:|:---------|:----------|
 | my_dates | date |       20 | 6/1/2025 | 8/31/2025 |
 
-Table 7. Example settings for date data
+Table 7. Example settings for date data {.table}
 
 After your dataset is created, run the
 [`select_dates_set()`](https://ajstamm.github.io/toysurveydata/reference/select_dates_set.md)
@@ -237,6 +248,7 @@ function, which allows you to generate multiple variables at once, if
 your dataset contains many date response questions.
 
 ``` r
+
 datedata <- select_dates_set(d = date, count = 5)
 ```
 
@@ -248,7 +260,7 @@ datedata <- select_dates_set(d = date, count = 5)
 |   4 | 2025-08-25 |
 |   5 | NA         |
 
-Table 8. Example date data
+Table 8. Example date data {.table style="width:40%;"}
 
 ## Extra functions in the package
 
@@ -264,6 +276,7 @@ input, the number of responses. It only produces one variable,
 “ip_address”.
 
 ``` r
+
 ipdata <- sample_ip(count = 5)
 ```
 
@@ -275,7 +288,7 @@ ipdata <- sample_ip(count = 5)
 |   4 | 255.16.128.64  |
 |   5 | 10.179.69.24   |
 
-Table 9. Example IP address data
+Table 9. Example IP address data {.table style="width:40%;"}
 
 ### Age data
 
@@ -287,21 +300,22 @@ own age variable by using start and end date variables that contained
 missingness.
 
 This function is not run using the settings table. It takes three
-inputs, start date, end date, and whether to include error. The only
-variable returned is age. In the example below, all dates in our date
-example were from 2025, so all ages will be 25 unless we introduce
-error.
+inputs, start date, end date, and a number indicating the level of error
+(from 0 to 100 percent). The only variable returned is age. In the
+example below, all dates in our date example were from 2025, so all ages
+will be 25 unless we introduce error.
 
 ``` r
-# since the chance of error is low, we will artificially increase the number of records
-end_dates = rep(datedata$my_dates, 10) # enter 50 end dates instead of 5
-age <- sample_age(start_date = "2000-01-01", end_date = end_dates, error = TRUE)
+
+# For illustration, increase error to 100%
+age <- sample_age(start_date = "2000-01-01", end_date = datedata$my_dates, error = 100)
 ```
 
 | age | Freq |
 |:----|-----:|
-| 25  |   39 |
-| 26  |    1 |
-| NA  |   10 |
+| 20  |    2 |
+| 26  |    2 |
+| NA  |    1 |
 
-Table 10. Frequency table of age data with errors
+Table 10. Frequency table of age data with errors {.table
+style="width:40%;"}

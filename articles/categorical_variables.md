@@ -66,6 +66,7 @@ could contain multiple different variables. I am showing only one
 variable here for simplicity.
 
 ``` r
+
 gender_opts <- data.frame(
   variable = "gender", 
   type = "select-one", 
@@ -79,6 +80,7 @@ After your settings file is created, read it into
 [`select_categorical_set()`](https://ajstamm.github.io/toysurveydata/reference/select_categorical_set.md).
 
 ``` r
+
 gender_resp <- select_categorical_set(d = gender_opts, count = 20)
 ```
 
@@ -154,6 +156,7 @@ fictional community, most people prefer to visit their primary care
 doctors for all health needs.
 
 ``` r
+
 seek_care_opts <- data.frame(
   variable = "seek_care", 
   type = "select-many", 
@@ -172,6 +175,7 @@ After your settings file is created, read it into
 [`select_many_set()`](https://ajstamm.github.io/toysurveydata/reference/select_many_set.md).
 
 ``` r
+
 seek_care_resp <- select_many_set(d = seek_care_opts, count = 20)
 ```
 
@@ -182,6 +186,7 @@ on “id” to combine the datasets. This step is not handled by the
 package.
 
 ``` r
+
 resps <- list(gender_resp, seek_care_resp)
 full_data <- purrr::reduce(resps, dplyr::left_join, by = "id") |> 
   dplyr::arrange(id)
