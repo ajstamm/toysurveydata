@@ -18,3 +18,7 @@ Useful links:
 
 **Maintainer**: Abigail Stamm <abby.stamm@state.mn.us> (author of R
 package)
+
+Authors:
+
+- Abigail Stamm <abby.stamm@state.mn.us> (author of R package)

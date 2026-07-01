@@ -43,7 +43,7 @@
 
     <div class="section level2">
     <h2 id="ref-usage">Usage<a class="anchor" aria-label="anchor" href="#ref-usage"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">sampling_error</span><span class="op">(</span><span class="va">var</span>, type <span class="op">=</span> <span class="st">"numeric"</span><span class="op">)</span></span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">sampling_error</span><span class="op">(</span><span class="va">var</span>, type <span class="op">=</span> <span class="st">"numeric"</span>, error <span class="op">=</span> <span class="fl">5</span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div class="section level2">
@@ -51,11 +51,16 @@
 
 
 <dl><dt id="arg-var">var<a class="anchor" aria-label="anchor" href="#arg-var"></a></dt>
-<dd><p>Vector of values to be modified</p></dd>
+<dd><p>vector of values to be modified</p></dd>
 
 
 <dt id="arg-type">type<a class="anchor" aria-label="anchor" href="#arg-type"></a></dt>
-<dd><p>Type of data in the vector: accepts "character" or "numeric"</p></dd>
+<dd><p>type of data in the vector: accepts "character" or "numeric"</p></dd>
+
+
+<dt id="arg-error">error<a class="anchor" aria-label="anchor" href="#arg-error"></a></dt>
+<dd><p>numeric; amount of error to include, from 0 (none) to 100
+(full dataset)</p></dd>
 
 </dl></div>
 

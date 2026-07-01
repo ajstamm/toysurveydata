@@ -5,18 +5,23 @@ Add sampling data errors
 ## Usage
 
 ``` r
-sampling_error(var, type = "numeric")
+sampling_error(var, type = "numeric", error = 5)
 ```
 
 ## Arguments
 
 - var:
 
-  Vector of values to be modified
+  vector of values to be modified
 
 - type:
 
-  Type of data in the vector: accepts "character" or "numeric"
+  type of data in the vector: accepts "character" or "numeric"
+
+- error:
+
+  numeric; amount of error to include, from 0 (none) to 100 (full
+  dataset)
 
 ## Examples
 

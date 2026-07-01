@@ -5,7 +5,7 @@ Create fictional ages based on birth date and survey date
 ## Usage
 
 ``` r
-sample_age(start_date, end_date = Sys.Date(), error = TRUE)
+sample_age(start_date, end_date = Sys.Date(), error = 0)
 ```
 
 ## Arguments
@@ -20,11 +20,12 @@ sample_age(start_date, end_date = Sys.Date(), error = TRUE)
 
 - error:
 
-  boolean; should errors be included in the ages?
+  numeric; amount of error to include, from 0 (none) to 100 (full
+  dataset)
 
 ## Examples
 
 ``` r
-sample_age(start_date = "1900-01-01", end_date = "1960-07-31", error = FALSE)
+sample_age(start_date = "1900-01-01", end_date = "1960-07-31", error = 100)
 #> [1] 60
 ```
