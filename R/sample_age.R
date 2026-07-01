@@ -6,7 +6,8 @@ utils::globalVariables(c("start", "end", "id", "age"))
 #'
 #' @param start_date date or vector of dates; birth date or other origin date
 #' @param end_date   dateor vector of dates; survey date or other completion date
-#' @param error      boolean; should errors be included in the ages?
+#' @param error      numeric; amount of error to include, from 0 (none) to 100
+#'                   (full dataset)
 #'
 #' @examples
 #' sample_age(start_date = "1900-01-01", end_date = "1960-07-31", error = FALSE)

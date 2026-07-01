@@ -4,8 +4,10 @@ utils::globalVariables(c("report_count"))
 
 #' Add sampling data errors
 #' 
-#' @param var  Vector of values to be modified
-#' @param type Type of data in the vector: accepts "character" or "numeric" 
+#' @param var   vector of values to be modified
+#' @param type  type of data in the vector: accepts "character" or "numeric" 
+#' @param error numeric; amount of error to include, from 0 (none) to 100
+#'              (full dataset)
 #' 
 #' 
 #' @examples
