@@ -4,33 +4,31 @@ template:
   bootstrap: 5
   params:
     bootswatch: cerulean
-
 repo:
   url:
     home: https://ajstamm.github.io/toysurveydata/
     source: https://github.com/ajstamm/toysurveydata/
     issue: https://github.com/ajstamm/toysurveydata/issues/
     user: https://github.com/ajstamm/
-
 navbar:
   type: inverse
-
 reference:
-- title: "Multiple variable creators"
-  desc: "Functions that calculate sets of variables"
+- title: Multiple variable creators
+  desc: Functions that calculate sets of variables
 - contents:
   - select_categorical_set
   - select_many_set
   - select_continuous_set
   - select_dates_set
-- title: "Single variable creators"
-  desc: "Functions that calculate single variables"
+- title: Single variable creators
+  desc: Functions that calculate single variables
 - contents:
   - sample_one
   - sample_many
   - sample_ip
-- title: "Data manipulators"
-  desc: "Functions that derive variables or add error to variables"
+- title: Data manipulators
+  desc: Functions that derive variables or add error to variables
 - contents:
   - sample_age
   - sampling_error
+
