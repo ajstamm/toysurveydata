@@ -4,12 +4,15 @@
 \alias{sampling_error}
 \title{Add sampling data errors}
 \usage{
-sampling_error(var, type = "numeric")
+sampling_error(var, type = "numeric", error = 5)
 }
 \arguments{
-\item{var}{Vector of values to be modified}
+\item{var}{vector of values to be modified}
 
-\item{type}{Type of data in the vector: accepts "character" or "numeric"}
+\item{type}{type of data in the vector: accepts "character" or "numeric"}
+
+\item{error}{numeric; amount of error to include, from 0 (none) to 100
+(full dataset)}
 }
 \description{
 Add sampling data errors

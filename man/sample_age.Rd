@@ -4,19 +4,20 @@
 \alias{sample_age}
 \title{Create fictional ages based on birth date and survey date}
 \usage{
-sample_age(start_date, end_date = Sys.Date(), error = TRUE)
+sample_age(start_date, end_date = Sys.Date(), error = 0)
 }
 \arguments{
 \item{start_date}{date or vector of dates; birth date or other origin date}
 
 \item{end_date}{dateor vector of dates; survey date or other completion date}
 
-\item{error}{boolean; should errors be included in the ages?}
+\item{error}{numeric; amount of error to include, from 0 (none) to 100
+(full dataset)}
 }
 \description{
 Create fictional ages based on birth date and survey date
 }
 \examples{
-sample_age(start_date = "1900-01-01", end_date = "1960-07-31", error = FALSE)
+sample_age(start_date = "1900-01-01", end_date = "1960-07-31", error = 100)
 
 }

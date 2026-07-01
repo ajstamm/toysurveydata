@@ -10,7 +10,7 @@ utils::globalVariables(c("start", "end", "id", "age"))
 #'                   (full dataset)
 #'
 #' @examples
-#' sample_age(start_date = "1900-01-01", end_date = "1960-07-31", error = FALSE)
+#' sample_age(start_date = "1900-01-01", end_date = "1960-07-31", error = 100)
 #'
 #' @export
 

@@ -21,5 +21,10 @@ Useful links:
 \author{
 \strong{Maintainer}: Abigail Stamm \email{abby.stamm@state.mn.us} (author of R package)
 
+Authors:
+\itemize{
+  \item Abigail Stamm \email{abby.stamm@state.mn.us} (author of R package)
+}
+
 }
 \keyword{internal}
