@@ -18,7 +18,7 @@ sampling_error(var, type = "numeric", error = 5)
 Add sampling data errors
 }
 \examples{
-d <- data.frame(x = signif(rnorm(10000, mean = 0, sd = 100), digits = 4))
-d$y <- sampling_error(d$x)
+d <- data.frame(x = signif(rnorm(10, mean = 0, sd = 100), digits = 4))
+d$y <- sampling_error(d$x, error = 50)
 
 }

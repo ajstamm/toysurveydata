@@ -11,8 +11,8 @@ utils::globalVariables(c("report_count"))
 #' 
 #' 
 #' @examples
-#' d <- data.frame(x = signif(rnorm(10000, mean = 0, sd = 100), digits = 4))
-#' d$y <- sampling_error(d$x)
+#' d <- data.frame(x = signif(rnorm(10, mean = 0, sd = 100), digits = 4))
+#' d$y <- sampling_error(d$x, error = 50)
 #' 
 #' @export
 
@@ -42,8 +42,9 @@ sampling_error <- function(var, type = "numeric", error = 5) {
               var <= -1 ~ as.numeric(paste0("-", 1, round(abs(var), digits = 1))),
               var >= 1 ~ as.numeric(paste0(1, round(abs(var), digits = 1))),
               var < 0 ~ 10^round(log10(abs(var))+1)*(-1) + var,
-              var > 0 ~ 10^round(log10(var)) + var,
-              .default = 0))))
+              var > 0 ~ 10^round(log10(abs(var))) + var,
+              .default = 0)),
+          .default = 0))
   } else if (type == "character") {
     diffs <- c(0:2)
     probs <- c(100, 10, 10)
