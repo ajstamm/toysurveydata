@@ -13,12 +13,15 @@ utils::globalVariables(c("start", "end", "id", "age"))
 #'
 #' @export
 
-sample_age <- function(start_date, end_date = Sys.Date(), error = TRUE) {
+sample_age <- function(start_date, end_date = Sys.Date(), error = 0) {
+  if (error == TRUE) error <- 10 else if (error == FALSE) error <- 0
+    
   # in R, date origin = "1970-01-01"
   d <- data.frame(start = as.Date(start_date), end = as.Date(end_date))
   d <- dplyr::mutate(d, id = 1:nrow(d),
                      age = lubridate::year(lubridate::as.period(
                            lubridate::interval(start, end))))
-  if (error) d$age <- sampling_error(round(d$age))
+  if (error > 0) d$age <- sampling_error(round(d$age), type = "numeric", 
+                                         error = error)
   return(d$age)
 }
