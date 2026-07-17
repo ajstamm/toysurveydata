@@ -138,13 +138,13 @@ dataset contains many multiple item selection questions.
 cat2data <- select_many_set(d = cat2, count = 5)
 ```
 
-|  id | d   | e   | b   | a   |
-|----:|:----|:----|:----|:----|
-|   1 | d   | NA  | NA  | a   |
-|   2 | d   | NA  | b   | a   |
-|   3 | d   | NA  | NA  | a   |
-|   4 | NA  | NA  | b   | NA  |
-|   5 | NA  | e   | b   | NA  |
+|  id | d   | e   | b   | a   | my_letters |
+|----:|:----|:----|:----|:----|:-----------|
+|   1 | d   | NA  | NA  | a   | a          |
+|   2 | d   | NA  | b   | a   | a; b       |
+|   3 | d   | NA  | NA  | a   | a          |
+|   4 | NA  | NA  | b   | NA  | b          |
+|   5 | NA  | e   | b   | NA  | b          |
 
 Table 4. Example multiple item selection categorical data {.table
 style="width:40%;"}
