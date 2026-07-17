@@ -19,6 +19,10 @@
 sample_one <- function(options, probs, count = 100, miss_pct = 10) {
   options <- c(options, NA)
   probs <- c(probs, sum(probs) * miss_pct / (100 - miss_pct))
-  t <- sample(options, size = count, replace = TRUE, prob = probs)
+  d <- data.frame(options = options, probs = probs) |>
+    dplyr::mutate(options = strsplit(options, ";")) |>
+    tidyr::unnest(options) |>
+    dplyr::mutate(options = trimws(options))
+  t <- sample(d$options, size = count, replace = TRUE, prob = d$probs)
   return(t)
 }
